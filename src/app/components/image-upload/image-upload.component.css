@@ -13,4 +13,18 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+ .crop-container {
+  position: relative;
+  display: inline-block;
+}
+
+.crop-area {
+  position: absolute;
+  border: 2px dashed #000;
+  cursor: move;
+}
+
+img {
+  max-width: 100%;
+}
 

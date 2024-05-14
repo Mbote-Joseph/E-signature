@@ -1,0 +1,7 @@
+<div class="signature-preview" *ngIf="signatureData">
+  <img *ngIf="signatureData.image" [src]="signatureData.image" alt="Profile Image">
+  <h2>{{ signatureData.fullName }}</h2>
+  <p>{{ signatureData.title }}</p>
+  <p>Email: {{ signatureData.email }}</p>
+  <p>Phone: {{ signatureData.phone }}</p>
+</div>

@@ -1,0 +1,5 @@
+<div class="templates-container">
+  <div class="template" *ngFor="let template of templates" (click)="selectTemplate(template)">
+    <img [src]="template.image" alt="Template Image">
+  </div>
+</div>

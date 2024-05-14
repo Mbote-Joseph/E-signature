@@ -1,0 +1,13 @@
+<input type="file" (change)="onFileChange($event)" accept="image/*">
+<div *ngIf="selectedImage" class="crop-container">
+  <img #image [src]="selectedImage" alt="Selected Image" (load)="onImageLoad(image)">
+  <div class="crop-area"
+       [style.top.px]="cropStartY"
+       [style.left.px]="cropStartX"
+       [style.width.px]="cropWidth"
+       [style.height.px]="cropHeight"
+       (mousedown)="startCrop($event)">
+  </div>
+</div>
+<button *ngIf="croppedImage" (click)="onSave()">Save</button>
+<img *ngIf="croppedImage" [src]="croppedImage" alt="Cropped Image">
